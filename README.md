@@ -12,7 +12,7 @@ composer require mahdinickdel/laravel-date-converter
 # Configuration
 If you want translations to be displayed in persian you must install composer package nesbot/carbon and set laravel locale to fa
 
-# Usage
+# Facade Usage
 ```php
 use use Mahdinickdel\LaravelDateConverter\Facades\DateConverter;
 
