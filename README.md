@@ -16,7 +16,7 @@ If you want translations to be displayed in persian you must install composer pa
 ```php
 use use Mahdinickdel\LaravelDateConverter\Facades\DateConverter;
 
-DateConverter::toJalali('2020-10-20'); // "1399-07-29"
-DateConverter::toGregorian('1378-12-10'); // "2000-02-29 06:50:30"
+DateConverter::toJalali('2020-10-20', 'yyyy-MM-dd'); // "1399-07-29"
+DateConverter::toGregorian('1378-12-10 10:20:30'); // "2000-02-29 06:50:30"
 DateConverter::timeAgo('2022-04-17'); // 2 سال پیش
 ```
