@@ -27,8 +27,13 @@ class DateConverterService
      * @param string $gregorianDateTime The Gregorian date and time in 'Y-m-d H:i:s' format.
      * @return string The Jalali date and time in the specified format.
      */
-    public function toJalali($gregorianDateTime, $format = 'yyyy-MM-dd HH:mm:ss')
+    public function toJalali($gregorianDateTime = null, $format = 'yyyy-MM-dd HH:mm:ss')
     {
+
+        if (!$gregorianDateTime) {
+            $gregorianDateTime = date('Y-m-d H:i:s');
+        }
+
         $this->formatter->setPattern($format);
         $timestamp = strtotime($gregorianDateTime);
         return $this->formatter->format($timestamp);
@@ -61,6 +66,6 @@ class DateConverterService
     public function timeAgo($dateTime, $parts = 1)
     {
         $carbonDate = Carbon::parse($dateTime);
-        return $carbonDate->diffForHumans(null, true, true, $parts);
+        return $carbonDate->diffForHumans(null, true, true, $parts) . " پیش";
     }
 }
