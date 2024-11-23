@@ -1,0 +1,27 @@
+{
+    "name": "mahdinickdel/laravel-date-converter",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Mahdinickdel\\LaravelDateConverter\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mahdinickdel\\LaravelDateConverter\\Providers\\DateConverterServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Mahdi Nickdel",
+            "email": "mahdinickdel@yahoo.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "nesbot/carbon": "^3.0"
+    }
+}
