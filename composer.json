@@ -2,6 +2,9 @@
     "name": "mahdinickdel/laravel-date-converter",
     "type": "library",
     "license": "MIT",
+    "require": {
+        "nesbot/carbon": "^3.0"
+    },
     "autoload": {
         "psr-4": {
             "Mahdinickdel\\LaravelDateConverter\\": "src/"
@@ -21,7 +24,5 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {
-        "nesbot/carbon": "^3.0"
-    }
+    "prefer-stable": true
 }
